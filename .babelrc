@@ -1,0 +1,14 @@
+{
+  "presets": [
+    [
+      "env",
+    {
+      "targets": {
+        "browsers": ["last 2 versions", "iOS 8"],
+        "node": 6,
+        "uglify": 2
+      }
+    }
+    ]
+  ]
+}
