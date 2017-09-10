@@ -1,0 +1,19 @@
+{
+  "name": "webstatic",
+  "version": "1.0.0",
+  "description": "webpack pug scss hmr es6",
+  "main": "index.js",
+  "author": "Mike3run",
+  "license": "MIT",
+  "scripts": {
+    "code": "webpack-dev-server"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "html-loader": "^0.5.1",
+    "pug": "^2.0.0-rc.4",
+    "pug-loader": "^2.3.0",
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.7.1"
+  }
+}
