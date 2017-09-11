@@ -1,8 +1,40 @@
+import { SRC } from './paths.js'
+
 const module = {
   rules: [
     {
+      test: /\.scss$/,
+      use: [
+        {
+          loader: 'style-loader'
+        },
+        {
+          loader: 'css-loader',
+          options: {
+            modules: true
+          }
+        },
+        {
+          loader: 'sass-loader'
+        }
+      ]
+    },
+    {
       test: /\.pug$/,
-      use: ['html-loader', 'pug-html-loader']
+      use: [
+        {
+          loader: 'html-loader'
+        },
+        {
+          loader: 'pug-html-loader',
+          options: {
+            baseDir: SRC,
+            data: {
+              require
+            }
+          }
+        }
+      ]
     }
   ]
 }
