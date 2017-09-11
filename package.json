@@ -6,7 +6,7 @@
   "author": "Mike3run",
   "license": "MIT",
   "scripts": {
-    "code": "webpack-dev-server",
+    "code": "webpack-dashboard -- webpack-dev-server",
     "build": "webpack --config webpack.config.prod.babel.js"
   },
   "dependencies": {
@@ -17,6 +17,7 @@
     "pug-html-loader": "^1.1.5",
     "pug-loader": "^2.3.0",
     "webpack": "^3.5.6",
+    "webpack-dashboard": "^1.0.0-5",
     "webpack-dev-server": "^2.7.1"
   }
 }

@@ -1,6 +1,7 @@
 import { join, resolve } from 'path'
 import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import DashboardPlugin from 'webpack-dashboard/plugin'
 
 const devServer = {
   hot: true,
@@ -30,7 +31,7 @@ const module = {
   rules: [
     {
       test: /\.pug$/,
-      use: ['html-loader', 'pug-html-loader?pretty&exports=false']
+      use: ['html-loader', 'pug-html-loader']
     }
   ]
 }
@@ -40,7 +41,8 @@ const plugins = [
   new HtmlWebpackPlugin({
     title: 'index.html',
     template: join(__dirname, 'src', 'index.pug')
-  })
+  }),
+  new DashboardPlugin()
 ]
 
 // Config object
