@@ -1,18 +1,21 @@
 import { join, resolve } from 'path'
+import glob from 'glob'
 
-const SRC = join(__dirname, '../../src')
+const BASE = process.cwd()
 
-const entry = {
-  index: join(SRC, 'index.pug')
-}
+const SRC = join(BASE, 'src')
+const DIST = resolve(BASE, 'build')
+
+const entry = glob.sync(SRC + '/*.pug')
 
 const output = {
-  path: resolve(__dirname, '../../build'),
+  path: DIST,
   filename: '[name].js'
 }
 
 export {
   entry,
   output,
-  SRC
+  SRC,
+  DIST
 }
