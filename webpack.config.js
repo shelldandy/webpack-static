@@ -27,7 +27,18 @@ module.exports = {
       {
         test: /\.pug$/,
         use: extractHtml.extract({
-          use: ['html-loader', 'pug-html-loader?pretty&exports=false']
+          use: [
+            {
+              loader: 'html-loader'
+            },
+            {
+              loader: 'pug-html-loader',
+              options: {
+                pretty: true,
+                exports: false
+              }
+            }
+          ]
         })
       }
     ]
