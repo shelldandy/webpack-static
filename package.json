@@ -6,7 +6,8 @@
   "author": "Miguel Palau <mpalauzarza@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "lint": "standard"
   },
   "dependencies": {
     "clean-webpack-plugin": "^0.1.17",
