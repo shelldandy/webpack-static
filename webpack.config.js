@@ -13,6 +13,8 @@ let extractHtml = new ExtractTextPlugin('[name].html')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const pathsToClean = [BUILD]
 
+const moduleImporter = require('sass-module-importer')
+
 module.exports = {
   entry: {
     index,
@@ -25,23 +27,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.pug$/,
-        use: extractHtml.extract({
-          use: [
-            {
-              loader: 'html-loader'
-            },
-            {
-              loader: 'pug-html-loader',
-              options: {
-                pretty: true,
-                exports: false
-              }
-            }
-          ]
-        })
-      },
-      {
         test: /\.scss$/,
         use: [
           {
@@ -51,7 +36,10 @@ module.exports = {
             loader: 'css-loader'
           },
           {
-            loader: 'sass-loader'
+            loader: 'sass-loader',
+            options: {
+              importer: moduleImporter()
+            }
           }]
       }
     ]
