@@ -1,5 +1,5 @@
-import { join, resolve } from 'path'
-import glob from 'glob'
+const { join, resolve } = require('path')
+const glob = require('glob')
 
 const BASE = process.cwd()
 
@@ -13,7 +13,7 @@ const output = {
   filename: '[name].js'
 }
 
-export {
+exports = {
   entry,
   output,
   SRC,

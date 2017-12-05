@@ -3,7 +3,7 @@ const path = require('path')
 
 const BASE = process.cwd()
 const SRC = path.join(BASE, 'src')
-const DIST = path.join(BASE, 'build')
+// const DIST = path.join(BASE, 'build')
 const pugFiles = glob.sync(SRC + '/*.pug')
 
 pugFiles.map(file => {

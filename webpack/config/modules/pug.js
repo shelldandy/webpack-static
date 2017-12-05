@@ -1,4 +1,4 @@
-import { SRC } from '../paths.js'
+const { SRC } = require('../paths.js')
 
 const pug = {
   test: /\.pug$/,
@@ -18,4 +18,4 @@ const pug = {
   ]
 }
 
-export default pug
+module.exports = pug

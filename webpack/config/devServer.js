@@ -1,4 +1,4 @@
-import { DIST } from './paths.js'
+const { DIST } = require('./paths.js')
 
 const devServer = {
   hot: true,
@@ -9,4 +9,4 @@ const devServer = {
   }
 }
 
-export default devServer
+module.exports = devServer

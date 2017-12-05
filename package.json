@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "code": "webpack-dashboard -- webpack-dev-server",
-    "build": "webpack --config webpack.config.prod.babel.js"
+    "build": "webpack --config webpack.config.prod.js",
+    "dev": "webpack"
   },
   "dependencies": {
     "babel-core": "^6.26.0",

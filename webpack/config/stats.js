@@ -8,4 +8,4 @@ const stats = {
   chunkModules: false
 }
 
-export default stats
+module.exports = stats

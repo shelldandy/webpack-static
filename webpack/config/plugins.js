@@ -1,10 +1,10 @@
-import { join } from 'path'
-import webpack from 'webpack'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import DashboardPlugin from 'webpack-dashboard/plugin'
-import { SRC, DIST } from './paths.js'
-import glob from 'glob'
-import HtmlWebpackHarddiskPlugin from 'html-webpack-harddisk-plugin'
+const { join } = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const DashboardPlugin = require('webpack-dashboard/plugin')
+const { SRC, DIST } = require('./paths.js')
+const glob = require('glob')
+const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
 
 const pugFiles = glob.sync(SRC + '/*.pug')
 
@@ -26,4 +26,4 @@ const plugins = [
   new HtmlWebpackHarddiskPlugin()
 ]
 
-export default plugins
+module.exports = plugins

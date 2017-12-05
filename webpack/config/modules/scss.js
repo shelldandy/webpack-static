@@ -16,4 +16,4 @@ const scss = {
   ]
 }
 
-export default scss
+module.exports = scss

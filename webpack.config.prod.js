@@ -1,5 +1,5 @@
-import { join, resolve } from 'path'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
+const {join, resolve} = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const stats = {
   assets: false,
@@ -20,7 +20,7 @@ const output = {
   filename: '[name].js'
 }
 
-const module = {
+const mod = {
   rules: [
     {
       test: /\.pug$/,
@@ -42,8 +42,8 @@ const config = {
   stats,
   entry,
   output,
-  module,
+  module: mod,
   plugins
 }
 
-export default config
+module.exports = config

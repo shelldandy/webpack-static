@@ -1,11 +1,11 @@
-import pug from './pug.js'
-import scss from './scss.js'
+const pug = require('./pug.js')
+const scss = require('./scss.js')
 
-const module = {
+const mod = {
   rules: [
     scss,
     pug
   ]
 }
 
-export default module
+module.exports = mod
