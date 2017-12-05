@@ -13,7 +13,9 @@ const pathsToClean = [BUILD]
 const moduleImporter = require('sass-module-importer')
 
 module.exports = {
-  entry: SRC,
+  entry: [
+    SRC
+  ],
   output: {
     path: BUILD,
     filename: '[name].js'
