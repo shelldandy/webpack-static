@@ -10,6 +10,9 @@ const sample = join(SRC, 'sample.pug')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 let extractHtml = new ExtractTextPlugin('[name].html')
 
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const pathsToClean = [BUILD]
+
 module.exports = {
   entry: {
     index,
@@ -30,6 +33,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(pathsToClean),
     extractHtml
   ]
 }
