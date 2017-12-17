@@ -10,10 +10,10 @@
     "lint": "standard"
   },
   "dependencies": {
-    "@babel/core": "^7.0.0-beta.34",
-    "@babel/runtime": "^7.0.0-beta.34",
+    "@babel/core": "^7.0.0-beta.35",
+    "@babel/runtime": "^7.0.0-beta.35",
     "babel-loader": "8.0.0-beta.0",
-    "babel-preset-timmy": "^0.3.0",
+    "babel-preset-timmy": "^0.4.0",
     "clean-webpack-plugin": "^0.1.17",
     "extract-text-webpack-plugin": "^3.0.2",
     "html-loader": "^0.5.1",
