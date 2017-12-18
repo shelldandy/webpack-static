@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "lint": "standard"
+    "lint": "eslint"
   },
   "dependencies": {
     "@babel/core": "^7.0.0-beta.35",
@@ -16,6 +16,8 @@
     "babel-preset-timmy": "^0.4.0",
     "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.7",
+    "eslint": "^4.13.1",
+    "eslint-config-pixel2html": "^1.0.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "html-loader": "^0.5.1",
     "node-sass": "^4.7.2",
@@ -24,7 +26,7 @@
     "style-loader": "^0.19.1",
     "webpack": "^3.10.0"
   },
-  "devDependencies": {
-    "standard": "^10.0.3"
+  "eslint": {
+    "extends": "pixel2html"
   }
 }
