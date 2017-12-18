@@ -10,8 +10,6 @@ let extractHtml = new ExtractTextPlugin('[name].html')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const pathsToClean = [BUILD]
 
-const moduleImporter = require('sass-module-importer')
-
 module.exports = {
   entry: [
     SRC
@@ -31,22 +29,6 @@ module.exports = {
             presets: ['timmy']
           }
         }
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              importer: moduleImporter()
-            }
-          }]
       }
     ]
   },
