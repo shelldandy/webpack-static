@@ -7,9 +7,6 @@ const BUILD = join(cwd(), 'build')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 let extractHtml = new ExtractTextPlugin('[name].html')
 
-const CleanWebpackPlugin = require('clean-webpack-plugin')
-const pathsToClean = [BUILD]
-
 module.exports = {
   entry: [
     SRC
@@ -23,7 +20,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(pathsToClean),
     extractHtml
   ]
 }
