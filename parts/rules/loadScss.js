@@ -1,5 +1,3 @@
-const moduleImporter = require('sass-module-importer')
-
 module.exports = ({include, exclude, sassOptions} = {}) => ({
   test: /\.scss$/,
   include,
@@ -18,7 +16,7 @@ module.exports = ({include, exclude, sassOptions} = {}) => ({
     {
       loader: require.resolve('sass-loader'),
       options: {
-        importer: moduleImporter(),
+        importer: require('sass-module-importer')(),
         sourceMap: true
       }
     }
