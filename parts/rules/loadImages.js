@@ -1,5 +1,5 @@
 module.exports = ({ include, exclude, options } = {}) => ({
-  test: /\.(jpg|jpeg|png|svg|gif)$/,
+  test: /\.(png|gif)$/,
   include,
   exclude,
   use: [
