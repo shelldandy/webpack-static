@@ -5,7 +5,9 @@ module.exports = ({include, exclude} = {}) => ({
   use: {
     loader: 'babel-loader',
     options: {
-      presets: ['timmy']
+      babelrc: false,
+      presets: [require.resolve('babel-preset-timmy')],
+      cacheDirectory: true
     }
   }
 })
