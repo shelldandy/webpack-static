@@ -1,5 +1,5 @@
 module.exports = ({include, exclude, sassOptions} = {}) => ({
-  test: /\.scss$/,
+  test: /\.(scss|sass)$/,
   include,
   exclude,
   use: [
