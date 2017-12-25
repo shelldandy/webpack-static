@@ -3,7 +3,7 @@ module.exports = ({include, exclude} = {}) => ({
   include,
   exclude,
   use: {
-    loader: 'babel-loader',
+    loader: require.resolve('babel-loader'),
     options: {
       babelrc: false,
       presets: [require.resolve('babel-preset-timmy')],
